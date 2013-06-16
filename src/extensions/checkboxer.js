@@ -76,7 +76,7 @@
                 (li == '<li>') &&
                 (checkmark == '[ ]' || checkmark == '[*]' || checkmark == '[<em>]' || checkmark == '[</em>]')
                ) {
-                lip = '<li class="li-checkbox">'+p;
+                lip = '<li class="li-checkbox">'+(p||"");
                 checked = checkmark == '[*]' || checkmark == '[<em>]' || checkmark == '[</em>]' ? 
                   'checked="checked"' : "";
                 return lip+'<input type="checkbox" '+checked+
