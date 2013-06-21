@@ -13,6 +13,10 @@
     uuidify: function(text, strip) {
       var whole_list = /(\s|\n)?(\s{0,3})(\\)?([*+\-]|\d+[.])[ \t]+(\[(\s|\*)\])(\[([\w\-]+)\]+)?/gi;
 
+      if (typeof text === 'undefined') {
+        return text;
+      }
+
       return text.replace(whole_list, 
         function(match, m1, m2, m3, marker, checked_attr, checked, uuid_attr, uuid) {
         // console.log( m1, m2, m3, marker, checked_attr, checked, uuid_attr, uuid);
