@@ -55,7 +55,7 @@
                 checked = checkmark == '[*]' || checkmark == '[<em>]' || checkmark == '[</em>]' ? 
                   'checked="checked"' : "";
                 return lip+'<input type="checkbox" '+checked+
-                  ' class="checkboxer-checkbox" data-checkboxer-uuid="'+uuid+'" /> '+content;
+                  ' class="checkboxer-checkbox" data-checkboxer-uuid="'+uuid+'" checkboxer-checkbox /> '+content;
               }
               return match;
             }
