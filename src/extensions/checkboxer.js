@@ -33,8 +33,12 @@
             // original text, so this runs twice, the first time would strip the slashes
             // then the actual preview makeHtml() call would no loner see those backslashes
             // and renders the checkbox
-            if (m1 === '')  return match; 
-            if (m3 === '\\') return match;
+            // FIXME this breaks this
+            // :markdown
+            //   - [ ] No uuid for checkbox on first line
+            //
+            // if (m1 === '')  return match; 
+            // if (m3 === '\\') return match;
 
             // suffix a uuid, supplement to help locate the checkbox
             // ex: 
