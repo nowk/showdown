@@ -13,7 +13,7 @@
     uuidify: function(text, strip) {
       var whole_list = /(\s|\n)?(\s{0,3})(\\)?([*+\-]|\d+[.])[ \t]+(\[(\s|\*)\])(\[([\w\-]+)\]+)?/gi;
 
-      if (typeof text === 'undefined') {
+      if (typeof text === 'undefined' || text === null) {
         return text;
       }
 
