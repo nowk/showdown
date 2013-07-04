@@ -22,10 +22,9 @@
         // console.log( m1, m2, m3, marker, checked_attr, checked, uuid_attr, uuid);
         if (uuid === '' || (typeof uuid === 'undefined')) {
           match = match+'['+checkboxer_methods.generate_uuid()+']';
-        } else {
-          if (strip === true) {
-             match = [m1, m2, m3, marker, ' ', checked_attr].join("");
-          }
+        }
+        if (strip === true) {
+           match = [m1, m2, m3, marker, ' ', checked_attr].join("");
         }
         return match;
       });
